@@ -1,6 +1,8 @@
 import Button, {ButtonProps} from '@mui/material/Button'; 
 import { styled } from '@mui/material/styles';
 
+import { useRouter } from 'next/router';
+
 const StyledButton = styled(Button)<ButtonProps>(({theme}) => ({
     color: 'red',
     backgroundColor: 'blue',
@@ -12,5 +14,6 @@ const StyledButton = styled(Button)<ButtonProps>(({theme}) => ({
 }));
 
 export default function MeuButton(params : {texto: string, href: string}){
-    return <StyledButton href={params.href}>{params.texto}</StyledButton>;
+    const router = useRouter();
+    return <StyledButton onClick={() => router.push(params.href)}>{params.texto}</StyledButton>;
 }
