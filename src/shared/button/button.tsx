@@ -4,11 +4,11 @@ import { styled } from '@mui/material/styles';
 import { useRouter } from 'next/router';
 
 const StyledButton = styled(Button)<ButtonProps>(({theme}) => ({
-    color: 'red',
-    backgroundColor: 'blue',
+    color: 'white',
+    backgroundColor: 'darkblue',
     '&:hover': {
-        color: 'blue',
-        backgroundColor: 'red'
+        color: 'grey',
+        backgroundColor: 'blue'
     }
 
 }));
