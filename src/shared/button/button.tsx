@@ -1,7 +1,7 @@
 import Button, {ButtonProps} from '@mui/material/Button'; 
 import { styled } from '@mui/material/styles';
 
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 const StyledButton = styled(Button)<ButtonProps>(({theme}) => ({
     color: 'white',

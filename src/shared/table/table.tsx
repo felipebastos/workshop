@@ -7,7 +7,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
 
-import { Pokemon } from "@/pages/teste";
+import { Pokemon } from "@/app/teste";
 
 export default function MyTable(params: {items: Pokemon[]}) {
     return (

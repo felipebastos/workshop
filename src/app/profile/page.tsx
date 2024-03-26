@@ -1,8 +1,9 @@
+'use client'
+
 import MeuButton from '@/shared/button/button';
 
-import RootLayout from '../layout';
 
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 import Button from '@mui/material/Button';
 import styles from './profile.module.css'
@@ -11,7 +12,7 @@ export default function Profile() {
   const router = useRouter();
 
   return (
-    <RootLayout>
+
     <div className={styles.caixa}>
       <h1>Perfil</h1>
       <p>Uma página de perfil</p>
@@ -22,6 +23,6 @@ export default function Profile() {
       <hr />
       <Button onClick={()=>router.push('/feed/1')}>Feed 1</Button>
     </div>
-    </RootLayout>
+
   );
 }

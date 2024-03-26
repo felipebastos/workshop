@@ -1,6 +1,7 @@
+'use client'
+
 import { useEffect, useState } from "react";
 
-import RootLayout from "../layout";
 import MyTable from "@/shared/table/table";
 
 import axios, { AxiosResponse } from "axios";
@@ -32,12 +33,12 @@ export default function Teste() {
     }, [])
     
     return (
-        <RootLayout>
+        <div>
             <div>
                 <h1>Teste</h1>
                 <p>Uma página de teste</p>
             </div>
             <MyTable items={lista} />
-        </RootLayout>
+            </div>
     )
 }

@@ -1,7 +1,12 @@
 import Link from 'next/link';
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div>
+    <html>
+    <head>
+      <title>Teste</title>
+      </head>
+      <body>
+    
       <h1>Um sistema para testar coisas de Next.js</h1>
       <nav>
         <Link href='/'>Home</Link>
@@ -10,6 +15,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Link href='/teste'>Teste</Link>
       </nav>
       {children}
-    </div>
+
+    </body>
+    </html>
   );
 }
