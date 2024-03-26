@@ -7,7 +7,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
 
-import { Pokemon } from "@/app/teste";
+import { Pokemon } from "@/app/teste/page";
 
 export default function MyTable(params: {items: Pokemon[]}) {
     return (
@@ -25,8 +25,8 @@ export default function MyTable(params: {items: Pokemon[]}) {
                      sx={
                         {
                          '&:hover': { backgroundColor: "gray"},
-                         '&:nth-child(even)': { backgroundColor: "lightgray",},
-                         '&:nth-child(even):hover': { backgroundColor: 'gray'},
+                         '&:nth-of-type(even)': { backgroundColor: "lightgray",},
+                         '&:nth-of-type(even):hover': { backgroundColor: 'gray'},
                         }
                      }
                     >

@@ -1,36 +1,19 @@
-'use client'
-
-import { useEffect, useState } from "react";
 
 import MyTable from "@/shared/table/table";
-
-import axios, { AxiosResponse } from "axios";
 
 export interface Pokemon {
     name: string;
     url: string;
   }
 
-export interface PokemonListResponse {
-    results: Pokemon[];
-}
+export default async function Teste() {
 
-export default function Teste() {
-    const [lista, setLista] = useState<Pokemon[]>([])
+    // O fetch é de uma api em que o servidor carrega os dados a nível de servidor e não no cliente
+    // É possível fazer cache de dados e também estabelecer quando eles devem ser revalidados
+    const res = await fetch('https://pokeapi.co/api/v2/pokemon/');
 
+    const lista = await res.json();
     
-    useEffect(() => {
-        async function fetchData() {
-            try {
-                const response: AxiosResponse<PokemonListResponse> = await axios.get('https://pokeapi.co/api/v2/pokemon/');
-                setLista(response.data.results);
-            } catch (error) {
-                console.error(error);
-            }
-        }
-
-        fetchData();
-    }, [])
     
     return (
         <div>
@@ -38,7 +21,7 @@ export default function Teste() {
                 <h1>Teste</h1>
                 <p>Uma página de teste</p>
             </div>
-            <MyTable items={lista} />
+            <MyTable items={lista.results} />
             </div>
     )
 }
