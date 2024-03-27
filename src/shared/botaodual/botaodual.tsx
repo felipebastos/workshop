@@ -18,6 +18,16 @@ const BotaoDual = styled(Button, {
       color: 'black',
       backgroundColor: 'yellow',
     }),
+    '&:hover': {
+      ...(tipo === 'um' && {
+        color: 'white',
+        backgroundColor: 'red',
+      }),
+        ...(tipo === 'dois' && {
+            color: 'black',
+            backgroundColor: 'orange',
+        }),
+    },
 }));
 
 export default BotaoDual;
