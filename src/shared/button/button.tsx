@@ -4,8 +4,8 @@ import { styled } from '@mui/material/styles';
 import { useRouter } from 'next/navigation';
 
 const StyledButton = styled(Button)<ButtonProps>(({theme}) => ({
-    color: 'white',
-    backgroundColor: 'darkblue',
+    color: 'pallete.main.color',
+    backgroundColor: 'pallete.main.backgroundColor',
     '&:hover': {
         color: 'grey',
         backgroundColor: 'blue'

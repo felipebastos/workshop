@@ -9,24 +9,16 @@ interface StyledButtonProps extends ButtonProps {
 const BotaoDual = styled(Button, {
   shouldForwardProp: (prop) => prop !== 'tipo',
 })<StyledButtonProps>(({ tipo, theme }) => ({
-  ...(tipo === 'um' &&
-    {
-        color: 'white',
-        backgroundColor: 'pink',
-    }),
-    ...(tipo === 'dois' && {
-      color: 'black',
-      backgroundColor: 'yellow',
-    }),
+  
+        color: theme.palette.primary.contrastText,
+        backgroundColor: theme.palette.primary.main,
+    
+    
     '&:hover': {
-      ...(tipo === 'um' && {
-        color: 'white',
-        backgroundColor: 'red',
-      }),
-        ...(tipo === 'dois' && {
-            color: 'black',
-            backgroundColor: 'orange',
-        }),
+      
+        color: theme.palette.text.primary,
+        backgroundColor: theme.palette.text.secondary,
+      
     },
 }));
 
